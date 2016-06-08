@@ -1,0 +1,170 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:My="clr-namespace:Quatos_Log.My" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="QuatosMain" x:Class="MainWindow"
+    Title="Quatos Drive Analysis UI" Height="716.702" Width="975.667" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0">
+    <Grid x:Name="Quatos" Margin="0,-20,-6.4,17.8" HorizontalAlignment="Left" Width="976">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32.8" />
+            <RowDefinition Height="658.4"/>
+        </Grid.RowDefinitions>
+        <GroupBox x:Name="GroupBox_1" Header="Controller Settings" HorizontalAlignment="Left" Margin="10,100.2,0,0" VerticalAlignment="Top" Height="233" Width="113" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" Margin="2,10,0,12" Width="100" Height="188">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+
+            		Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="A1" Height="22" HorizontalAlignment="Left" FontSize="10" Content="A1" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" RenderTransformOrigin="-5.009,1.732"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="A2" Margin="0,27,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="A2" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="K1" Margin="0,54,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="K1" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="MRP" Margin="0,81,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Rpm" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.133,0.667" x:Name="MPoles" Margin="0,108,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Blades" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.133,0.667" x:Name="PWLow" Margin="0,135,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Pwm" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="34" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.133,0.667" x:Name="PWHi" Margin="0,162,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="to" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="MotA1" Margin="39,0,0,166" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Mot A1" HorizontalContentAlignment="Right"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="MotA2" Margin="39,27,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Mot A2" HorizontalContentAlignment="Right"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.088,0.594" x:Name="MaxRpm" Margin="39,81,0,0" HorizontalAlignment="Left" FontSize="10" Content="Max Rpm" HorizontalContentAlignment="Right" Height="22"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="MotorPoles" Margin="39,108,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="Blades" HorizontalContentAlignment="Right"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.088,0.594" x:Name="MinPWM" Margin="39,135,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="MinPWM" HorizontalContentAlignment="Right"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="-0.088,0.594" x:Name="MaxPWM" Margin="39,162,0,0" Height="22" HorizontalAlignment="Left" FontSize="10" Content="MaxPWM" HorizontalContentAlignment="Right"/>
+                <Label
+
+                	Width="57" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" x:Name="PropK1" Margin="39,54,0,0" HorizontalAlignment="Left" FontSize="10" Content="Prop K2" RenderTransformOrigin="2.953,0.846" HorizontalContentAlignment="Right" Height="22"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GroupBox_2" Header="Actual Measured" HorizontalAlignment="Left" Margin="164,100.2,0,0" VerticalAlignment="Top" Height="233" Width="113" Grid.Row="1">
+            <Grid Margin="2,10,0,10" HorizontalAlignment="Center" Width="100" Height="188">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="68*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="U1" Content="U" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.RowSpan="2"/>
+                <Label x:Name="Voltage" Content="Voltage" HorizontalAlignment="Left" Margin="36,0,0,0" VerticalAlignment="Top" Width="57" Height="22" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontSize="10" HorizontalContentAlignment="Right" Grid.RowSpan="2"  />
+                <Label x:Name="I1" Content="I" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.Row="1"/>
+                <Label x:Name="Curr" Content="Current" HorizontalAlignment="Left" Margin="36,18,0,0" VerticalAlignment="Top" Width="57" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" HorizontalContentAlignment="Right"/>
+                <Label x:Name="TL1" Content="TL" HorizontalAlignment="Left" Margin="0,45,0,0" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.Row="1"/>
+                <Label x:Name="ToL" Content="ToL" HorizontalAlignment="Left" Margin="36,45,0,0" Width="57" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="22" VerticalAlignment="Top" Grid.Row="1" HorizontalContentAlignment="Right"/>
+                <Label x:Name="TR1" Content="TR" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.Row="1"/>
+                <Label x:Name="ToR" Content="ToR" HorizontalAlignment="Left" Margin="36,72,0,0" VerticalAlignment="Top" Width="57" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" HorizontalContentAlignment="Right"/>
+                <Label x:Name="Th1" Content="Th" HorizontalAlignment="Left" Margin="0,99,0,0" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.Row="1"/>
+                <Label x:Name="Thrust" Content="Thrust" HorizontalAlignment="Left" Margin="36,100,0,0"  VerticalAlignment="Top" Width="57" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" Grid.Row="1" HorizontalContentAlignment="Right">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.461"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="UMin" Content="Rpm" HorizontalAlignment="Left" Margin="0,126,0,0" VerticalAlignment="Top" Width="31" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.Row="1"/>
+                <Label x:Name="RPM" Content="RPM" HorizontalAlignment="Left" Margin="36,127,0,0"  VerticalAlignment="Top" Width="57" Height="22" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" Grid.Row="1" HorizontalContentAlignment="Right">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.461"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GroupBox_3" Header="Tested Unit" HorizontalAlignment="Left" Margin="10,4.2,0,0" VerticalAlignment="Top" Height="91" Width="271" Grid.Row="1">
+            <Grid HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="254" Margin="0,0,0,-1.2">
+                <TextBox x:Name="TestUnitText" Height="23" Margin="0,10,0,0" TextWrapping="Wrap" Text="Motor, Prop, Voltage" VerticalAlignment="Top" HorizontalAlignment="Left" Width="246"/>
+                <Button x:Name="Btn_SetTestedUnit" Content="Set" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Width="75"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Controller Output" HorizontalAlignment="Left" Margin="10,338.2,0,0" VerticalAlignment="Top" Height="311" Width="934" Grid.Row="1">
+            <Grid HorizontalAlignment="Left" Height="296" Margin="0,10,-2.4,-54.8" VerticalAlignment="Top" Width="924">
+                <TextBox x:Name="QuatSerText" HorizontalAlignment="Left" Margin="5,10,0,0" Text="TextBox" VerticalAlignment="Top" IsUndoEnabled="False" TextOptions.TextFormattingMode="Display" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AllowDrop="False" Focusable="False" IsReadOnly="True" Height="233" Width="899" />
+                <Button x:Name="ClearText" Content="Clear" HorizontalAlignment="Left" Margin="0,255,0,0" VerticalAlignment="Top" Width="75" Height="21"/>
+            </Grid>
+        </GroupBox>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-258,488.2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <GroupBox Header="System Settings" HorizontalAlignment="Left" Margin="323,100.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="233" Width="280">
+            <Grid HorizontalAlignment="Center" Height="223" Margin="0,0,0,-12.6" VerticalAlignment="Top" Width="270">
+                <TextBox x:Name="SendSerialTxt" HorizontalAlignment="Left" Height="23" Margin="6,10,0,0" TextWrapping="Wrap" Text="Serial Command" VerticalAlignment="Top" Width="184"/>
+                <Button x:Name="SendSerialBtn" Content="Send" HorizontalAlignment="Left" Margin="204,11,0,0" VerticalAlignment="Top" Width="56" Height="22"/>
+                <ComboBox x:Name="SerialCmdCombo" HorizontalAlignment="Left" Margin="6,39,0,0" VerticalAlignment="Top" Width="183" Height="22"/>
+                <ComboBox x:Name="CmdValueCombo" HorizontalAlignment="Left" Margin="204,38,0,0" VerticalAlignment="Top" Width="56" SelectionChanged="ComboBox_SelectionChanged" Height="23"/>
+                <ComboBox x:Name="Combo_PropBlades" HorizontalAlignment="Left" Margin="133,71,0,0" VerticalAlignment="Top" Width="56"/>
+                <ComboBox x:Name="Combo_MaxRpm" HorizontalAlignment="Left" Margin="133,97,0,0" VerticalAlignment="Top" Width="56"/>
+                <ComboBox x:Name="Combo_MinPwm" HorizontalAlignment="Left" Margin="133,124,0,0" VerticalAlignment="Top" Width="56"/>
+                <ComboBox x:Name="Combo_MaxPwm" HorizontalAlignment="Left" Margin="133,150,0,0" VerticalAlignment="Top" Width="56"/>
+                <Label x:Name="Lbl_SetPropBlades" Content="Nr. Prop Blades" HorizontalAlignment="Left" Margin="6,71,0,0" VerticalAlignment="Top" Height="26" Width="101"/>
+                <Label x:Name="Lbl_SetMaxRpm" Content="Max RPM" HorizontalAlignment="Left" Margin="6,97,0,0" VerticalAlignment="Top" Width="101"/>
+                <Label x:Name="Lbl_SetMinPwm" Content="Min PWM" HorizontalAlignment="Left" Margin="6,124,0,0" VerticalAlignment="Top" Width="101"/>
+                <Label x:Name="Lbl_SetMaxPwm" Content="Max PWM" HorizontalAlignment="Left" Margin="6,150,0,0" VerticalAlignment="Top" Width="101"/>
+                <Button x:Name="Btn_SetSystem" Content="Set" HorizontalAlignment="Left" Margin="203,191,0,0" VerticalAlignment="Top" Width="57"/>
+                <Label x:Name="Lbl_SetRpmStep" Content="RPM Step" HorizontalAlignment="Left" Margin="6,176,0,0" VerticalAlignment="Top" Width="101"/>
+                <ComboBox x:Name="Combo_SetRpmStep" HorizontalAlignment="Left" Margin="133,178,0,0" VerticalAlignment="Top" Width="56"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="GroupBox_3_Copy" Header="Basic Settings" HorizontalAlignment="Left" Margin="323,4.2,0,0" VerticalAlignment="Top" Height="91" Width="280" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" Height="71" Margin="0,0,0,-2.2" VerticalAlignment="Top" Width="270">
+                <Button x:Name="BtnConnect" Content="Connect " HorizontalAlignment="Left" Margin="6,9,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+                <ListBox x:Name="ComPort" HorizontalAlignment="Left" Height="22" Margin="147,10,0,0" VerticalAlignment="Top" Width="113"/>
+                <CheckBox x:Name="ESC32Checkbox" Content="ESC32" HorizontalAlignment="Left" Margin="6,45,0,0" VerticalAlignment="Top" Height="16" Width="63" IsChecked="True" />
+                <CheckBox x:Name="ArduCheckbox" Content="Std ESC" HorizontalAlignment="Left" Margin="71,45,0,0" VerticalAlignment="Top" Height="16" Width="59"/>
+                <CheckBox x:Name="ESC32ThMode" Content="ESC32 Thrust Mode" HorizontalAlignment="Left" Margin="147,45,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Log Programs" HorizontalAlignment="Left" Margin="640,4.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="202" Width="304">
+            <Grid HorizontalAlignment="Center" Height="177" Margin="0,0,0,2.2" VerticalAlignment="Bottom" Width="294">
+                <Button x:Name="StopButton" Content="Stop" Margin="0,154,0,0" VerticalAlignment="Top" BorderThickness="1" Height="23" Width="130" IsDefault="True" RenderTransformOrigin="0.508,0.237" HorizontalContentAlignment="Center" ClickMode="Press" HorizontalAlignment="Center"/>
+                <Button x:Name="Rpm2Thrust" Content="Rpm 2 Thrust" Margin="6,35,0,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Left" Width="130" />
+                <Button x:Name="MaxRpmBtn" Content="Run Max Rpm Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="6,7,0,0" Height="23"/>
+                <Button x:Name="OLRpmThrust" Content="OL Rpm 100Hz" HorizontalAlignment="Left" Margin="6,63,0,0" VerticalAlignment="Top" Width="130" Height="23" RenderTransformOrigin="0.534,1.409"/>
+                <Button x:Name="SinRpm" Content="OL Sin Rpm 100Hz" HorizontalAlignment="Left" Margin="6,91,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+                <Button x:Name="Logdata" Content="Start Logdata" HorizontalAlignment="Left" Margin="154,91,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+                <Button x:Name="CLRpmThrust1" Content="CL Rpm 1000Hz" HorizontalAlignment="Left" Margin="154,35,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+                <Button x:Name="CLThrustStep1" Content="CL Thrust 100Hz" HorizontalAlignment="Left" Margin="154,63,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+                <Button x:Name="CLRpmThrust" Content="CL Rpm 100Hz" HorizontalAlignment="Left" Margin="154,7,0,0" VerticalAlignment="Top" Width="130" Height="23"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Manual Motor run" HorizontalAlignment="Left" Margin="640,211.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="304" Height="122">
+            <Grid HorizontalAlignment="Left" Height="101" Margin="0,0,0,-1.8" VerticalAlignment="Top" Width="270">
+                <TextBox x:Name="RpmVal" HorizontalAlignment="Left" Height="23" Margin="190,8,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="38" DataContext="{Binding Value, ElementName=RPMSlider, Mode=TwoWay}"/>
+                <Slider x:Name="RPMSlider" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="185" LargeChange="1000" Maximum="10000" Minimum="1000" SmallChange="100" Height="22"/>
+                <Button x:Name="ESCRun" Content="Start Motor" HorizontalAlignment="Center" Margin="0,71,0,0" VerticalAlignment="Top" Width="260" Height="23"/>
+                <Label x:Name="MotRunLabel" Content="RPM" HorizontalAlignment="Left" Margin="228,6,0,0" VerticalAlignment="Top" Width="42" Height="25"/>
+            </Grid>
+        </GroupBox>
+        <Ellipse x:Name="HeartBeat" HorizontalAlignment="Left" Margin="443,32.2,0,608.2" Stroke="#FF0AF552" Width="18" RenderTransformOrigin="4.825,1.017" Fill="#FF3AF50A" Grid.Row="1"/>
+
+    </Grid>
+
+
+</Window>
+
